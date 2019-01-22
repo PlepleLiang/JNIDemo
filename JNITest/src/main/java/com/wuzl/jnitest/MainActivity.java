@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button mBtGetJniString;
     private Button mBtSetJniString;
+    private Button mBtSayHi;
     private TextView mTvShowJniString;
     private HelloWorldJNI mHelloWorldJni;
 
@@ -20,8 +21,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         mBtGetJniString = findViewById(R.id.bt_get_jnistring);
         mBtSetJniString = findViewById(R.id.bt_set_jnistring);
+        mBtSayHi = findViewById(R.id.bt_say_hi);
         mBtGetJniString.setOnClickListener(this);
         mBtSetJniString.setOnClickListener(this);
+        mBtSayHi.setOnClickListener(this);
         mTvShowJniString = findViewById(R.id.tv_show_jnistring);
         mHelloWorldJni = new HelloWorldJNI();
     }
@@ -36,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_set_jnistring:
                 String helloWorld = mHelloWorldJni.setString("HelloWorld");
                 mTvShowJniString.setText(helloWorld);
+                break;
+            case R.id.bt_say_hi:
+                String hi = mHelloWorldJni.sayHi("XiaoMing");
+                mTvShowJniString.setText(hi);
                 break;
         }
     }

@@ -23,6 +23,7 @@ JNIEXPORT jstring JNICALL Java_com_wuzl_jnitest_HelloWorldJNI_getString
 JNIEXPORT jstring JNICALL Java_com_wuzl_jnitest_HelloWorldJNI_setString
   (JNIEnv *, jobject, jstring);
 
+
 #ifdef __cplusplus
 }
 #endif

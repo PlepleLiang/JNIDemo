@@ -11,4 +11,7 @@ public class HelloWorldJNI {
     public native String getString();
 
     public native String setString(String text);
+
+    public native String sayHi(String text);
+
 }
